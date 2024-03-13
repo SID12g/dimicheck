@@ -5,6 +5,7 @@ import Header from "@/components/student/header/header";
 import User from "@/components/student/user/user";
 import Navigation from "@/components/student/navigation/navigation";
 import Summary from "@/components/student/summary/summary";
+import Detail from "@/components/student/detail/detail";
 
 export default function Statics() {
   return (
@@ -14,11 +15,12 @@ export default function Statics() {
         <User />
         <Navigation nowPage="statics" />
         <Summary />
+        <Detail />
+      </div>
+      <div className={styles.inquiry}>
+        문의 :<p className={styles.id}>@clwm_222</p>
       </div>
       <div className={styles.footer}>
-        <div className={styles.inquiry}>
-          문의 :<p className={styles.id}>@clwm_222</p>
-        </div>
         <Image
           className={styles.background}
           src={dimigo}

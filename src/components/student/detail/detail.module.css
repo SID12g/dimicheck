@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+}
+
+.row {
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.type {
+  font-size: 24px;
+  font-family: "SUIT";
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.people {
+  font-size: 28px;
+  font-family: "SUIT";
+  font-weight: 500;
+  margin: 0;
+}
