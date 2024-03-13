@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 80px;
+  font-family: "SUITE Variable";
+  text-align: center;
+  margin-top: 96px;
+  margin-bottom: 88px;
+}
+
+.wrap {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.background {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  bottom: 0px;
+}
+
+@media (max-width: 1200px) {
+  .wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
