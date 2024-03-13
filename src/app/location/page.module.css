@@ -25,6 +25,10 @@
 }
 
 .id {
+  background: linear-gradient(#ad00ff, #ff0541);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .background {

@@ -1,21 +1,40 @@
 .container {
   height: 40px;
-  border-bottom: 1px solid black;
   display: flex;
   align-items: center;
 }
 
-.button {
+.activeBtn {
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-image: linear-gradient(to right, #ad00ff 0%, #ff0541 100%);
+  border-image-slice: 1;
+  border-bottom: 1px solid transparent;
 }
 
-.text {
+.activeText {
   font-size: 14px;
   font-family: "SUIT";
   font-weight: 700;
+  margin: 0;
+}
+
+.deactivatedBtn {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.deactivatedText {
+  font-size: 14px;
+  font-family: "SUIT";
+  font-weight: 700;
+  color: #a8a8a8;
   margin: 0;
 }
