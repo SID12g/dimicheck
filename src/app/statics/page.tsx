@@ -1,5 +1,5 @@
+import styles from "@/app/statics/page.module.css";
 import Header from "@/components/header/header";
-import styles from "./page.module.css";
 import User from "@/components/user/user";
 import Navigation from "@/components/navigation/navigation";
 import Option from "@/components/option/option";
@@ -7,18 +7,13 @@ import Etc from "@/components/etc/etc";
 import Image from "next/image";
 import dimigo from "@/../public/images/dimigo.svg";
 
-export default function Location() {
+export default function Statics() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
         <Header />
         <User />
-        <Navigation nowPage="location" />
-        <Option location="교실" />
-        <Option location="화장실, 물" />
-        <Option location="방과후" />
-        <Option location="동아리" />
-        <Etc />
+        <Navigation nowPage="statics" />
       </div>
       <div className={styles.footer}>
         <div className={styles.inquiry}>

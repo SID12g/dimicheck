@@ -13,6 +13,7 @@
   border-image: linear-gradient(to right, #ad00ff 0%, #ff0541 100%);
   border-image-slice: 1;
   border-bottom: 1px solid transparent;
+  text-decoration: none;
 }
 
 .activeText {
@@ -20,6 +21,7 @@
   font-family: "SUIT";
   font-weight: 700;
   margin: 0;
+  color: black;
 }
 
 .deactivatedBtn {
@@ -29,6 +31,7 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid black;
+  text-decoration: none;
 }
 
 .deactivatedText {

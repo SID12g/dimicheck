@@ -1,0 +1,53 @@
+.main {
+  width: 400px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  bottom: 0px;
+}
+
+.inquiry {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: "SUIT";
+  position: relative;
+  justify-content: center;
+}
+
+.id {
+  background: linear-gradient(#ad00ff, #ff0541);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+}
+
+@media (max-width: 400px) {
+  .main {
+    width: 100%;
+  }
+}
+
+@media (max-height: 660px) {
+  .footer {
+  }
+  .inquiry {
+    display: none;
+  }
+}

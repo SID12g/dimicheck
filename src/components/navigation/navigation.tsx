@@ -1,14 +1,37 @@
 import styles from "@/components/navigation/navigation.module.css";
+import Link from "next/link";
 
-export default function Navigation() {
+export default function Navigation({ nowPage }: { nowPage: string }) {
   return (
     <div className={styles.container}>
-      <div className={styles.activeBtn}>
-        <p className={styles.activeText}>위치</p>
-      </div>
-      <div className={styles.deactivatedBtn}>
-        <p className={styles.deactivatedText}>통계</p>
-      </div>
+      <Link
+        href="/location"
+        className={
+          nowPage == "location" ? styles.activeBtn : styles.deactivatedBtn
+        }
+      >
+        <p
+          className={
+            nowPage == "location" ? styles.activeText : styles.deactivatedText
+          }
+        >
+          위치
+        </p>
+      </Link>
+      <Link
+        href="/statics"
+        className={
+          nowPage == "statics" ? styles.activeBtn : styles.deactivatedBtn
+        }
+      >
+        <p
+          className={
+            nowPage == "statics" ? styles.activeText : styles.deactivatedText
+          }
+        >
+          통계
+        </p>
+      </Link>
     </div>
   );
 }
