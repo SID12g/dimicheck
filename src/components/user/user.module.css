@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid black;
+}
+
+.profile {
+  width: 60px;
+  height: 60px;
+  margin-left: 16px;
+  border-radius: 100px;
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  margin-left: 12px;
+  align-self: center;
+}
+
+.name {
+  font-size: 18px;
+  font-family: "SUIT";
+  font-weight: 600;
+  margin: 0;
+}
+
+.email {
+  font-size: 12px;
+  font-family: "SUIT";
+  font-weight: 600;
+  color: #a8a8a8;
+  margin: 0;
+}
+
+.logout {
+  font-size: 14px;
+  font-family: "SUIT";
+  font-weight: 700;
+  color: #f25c5c;
+  margin-right: 28px;
+}

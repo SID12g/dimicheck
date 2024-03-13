@@ -1,0 +1,37 @@
+.container {
+  height: 160px;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.type {
+  font-size: 24px;
+  font-family: "SUIT";
+  font-weight: 700;
+  margin-left: 36px;
+}
+
+.select {
+  font-size: 16px;
+  font-family: "SUIT";
+  font-weight: 500;
+  color: #a8a8a8;
+  margin-right: 36px;
+}
+
+.input {
+  width: 80%;
+  height: 20px;
+  border-radius: 30px;
+  padding: 20px;
+  border: 1px solid black;
+}

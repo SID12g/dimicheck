@@ -1,0 +1,13 @@
+.container {
+  height: 48px;
+  border-bottom: 1px solid black;
+}
+
+.title {
+  font-size: 16px;
+  font-family: "SUIT";
+  font-weight: 600;
+  padding: 12px;
+  text-align: center;
+  margin: 0;
+}
