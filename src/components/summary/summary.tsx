@@ -9,11 +9,11 @@ export default function Summary() {
       </div>
       <div className={styles.row}>
         <p className={styles.type}>현원</p>
-        <p className={styles.number}>31명</p>
+        <p className={styles.number}>27명</p>
       </div>
       <div className={styles.row}>
         <p className={styles.type}>결원</p>
-        <p className={styles.number}>1명</p>
+        <p className={styles.number}>4명</p>
       </div>
     </div>
   );
