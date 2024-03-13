@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "@/components/time/time.module.css";
+import styles from "@/components/status/time/time.module.css";
 import { useState } from "react";
 import Moment from "react-moment";
 import useInterval from "use-interval";

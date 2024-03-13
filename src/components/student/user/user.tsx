@@ -1,4 +1,4 @@
-import styles from "@/components/user/user.module.css";
+import styles from "@/components/student/user/user.module.css";
 import user from "@/../public/images/user.png";
 import Image from "next/image";
 

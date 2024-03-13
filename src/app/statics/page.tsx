@@ -1,11 +1,10 @@
 import styles from "@/app/statics/page.module.css";
-import Header from "@/components/header/header";
-import User from "@/components/user/user";
-import Navigation from "@/components/navigation/navigation";
-import Option from "@/components/option/option";
-import Etc from "@/components/etc/etc";
 import Image from "next/image";
 import dimigo from "@/../public/images/dimigo.svg";
+import Header from "@/components/student/header/header";
+import User from "@/components/student/user/user";
+import Navigation from "@/components/student/navigation/navigation";
+import Summary from "@/components/student/summary/summary";
 
 export default function Statics() {
   return (
@@ -14,6 +13,7 @@ export default function Statics() {
         <Header />
         <User />
         <Navigation nowPage="statics" />
+        <Summary />
       </div>
       <div className={styles.footer}>
         <div className={styles.inquiry}>

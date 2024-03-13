@@ -1,4 +1,4 @@
-import styles from "@/components/summary/summary.module.css";
+import styles from "@/components/student/summary/summary.module.css";
 
 export default function Summary() {
   return (

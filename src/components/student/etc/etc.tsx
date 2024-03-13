@@ -1,4 +1,4 @@
-import styles from "@/components/etc/etc.module.css";
+import styles from "@/components/student/etc/etc.module.css";
 
 export default function Etc() {
   return (

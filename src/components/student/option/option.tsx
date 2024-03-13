@@ -1,4 +1,4 @@
-import styles from "@/components/option/option.module.css";
+import styles from "@/components/student/option/option.module.css";
 
 export default function Option({ location }: { location: string }) {
   const selected = "교실";

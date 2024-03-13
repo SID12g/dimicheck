@@ -1,11 +1,12 @@
-import Header from "@/components/header/header";
 import styles from "./page.module.css";
-import User from "@/components/user/user";
-import Navigation from "@/components/navigation/navigation";
-import Option from "@/components/option/option";
-import Etc from "@/components/etc/etc";
+
 import Image from "next/image";
 import dimigo from "@/../public/images/dimigo.svg";
+import Header from "@/components/student/header/header";
+import User from "@/components/student/user/user";
+import Navigation from "@/components/student/navigation/navigation";
+import Option from "@/components/student/option/option";
+import Etc from "@/components/student/etc/etc";
 
 export default function Location() {
   return (

@@ -1,4 +1,4 @@
-import styles from "@/components/navigation/navigation.module.css";
+import styles from "@/components/student/navigation/navigation.module.css";
 import Link from "next/link";
 
 export default function Navigation({ nowPage }: { nowPage: string }) {

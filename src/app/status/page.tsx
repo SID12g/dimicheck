@@ -1,9 +1,9 @@
 import styles from "@/app/status/page.module.css";
 import Image from "next/image";
 import dimigo from "@/../public/images/dimigo.svg";
-import Summary from "@/components/summary/summary";
-import Detail from "@/components/detail/detail";
-import Time from "@/components/time/time";
+import Summary from "@/components/status/summary/summary";
+import Detail from "@/components/status/detail/detail";
+import Time from "@/components/status/time/time";
 
 export default function Status() {
   return (
