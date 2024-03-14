@@ -9,6 +9,16 @@ export async function POST(request: Request, response: Response) {
   const hash = await bcrypt.hash(password, 10);
   const user = { number, password: hash, location: "class", reason: "" };
 
+  let db = (await connectDB).db("dimicheck_database24");
+  let dbuser = await db.collection("users").findOne({ number: number });
+
+  if (dbuser) {
+    return NextResponse.json({
+      status: 409,
+      error: "해당 번호는 이미 존해합니다.",
+    });
+  }
+
   try {
     let db = (await connectDB).db("dimicheck_database24");
     await db.collection("users").insertOne(user);

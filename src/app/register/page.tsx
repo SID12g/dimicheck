@@ -1,12 +1,16 @@
+import styles from "@/app/register/page.module.css";
+import Image from "next/image";
+import dimigo from "@/../public/images/dimigo.svg";
+
 export default function Register() {
   const numbers = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
     22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
   ];
   return (
-    <div>
-      <form method="POST" action="/api/auth/signup">
-        <select name="number" defaultValue={""}>
+    <div className={styles.container}>
+      <form className={styles.form} method="POST" action="/api/auth/signup">
+        <select className={styles.select} name="number" defaultValue={""}>
           <option value="" disabled hidden>
             번호
           </option>
@@ -16,9 +20,26 @@ export default function Register() {
             </option>
           ))}
         </select>
-        <input name="password" type="password" placeholder="비번" />
-        <button type="submit">가입</button>
+        <input
+          className={styles.pin}
+          type="password"
+          name="password"
+          pattern="[0-9]{4}"
+          maxLength={4}
+          inputMode="numeric"
+          placeholder="PIN 4자리를 입력하세요"
+        />
+        <button className={styles.submit} type="submit">
+          가입
+        </button>
       </form>
+      <Image
+        className={styles.background}
+        src={dimigo}
+        alt="background"
+        width={4096}
+        height={775}
+      />
     </div>
   );
 }
