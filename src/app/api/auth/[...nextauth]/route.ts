@@ -3,8 +3,9 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import { connectDB } from "@/util/database";
 import bcrypt from "bcrypt";
+import nextAuth from "next-auth";
 
-const handler = NextAuth({
+export const authOptions = NextAuth({
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -64,5 +65,7 @@ const handler = NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
   adapter: MongoDBAdapter(connectDB),
 });
+
+const handler = nextAuth(authOptions);
 
 export { handler as GET, handler as POST };
