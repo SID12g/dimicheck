@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DIMI CHECK",
     description: "디미고 내 인원체크를 손 쉽게",
-    images: ["https://dimicheck.sid12g.dev/images/dimicheck.png"],
+    images: "/images/dimicheck.png",
   },
 };
 
