@@ -1,8 +1,17 @@
+"use client";
+
 import styles from "@/components/student/user/user.module.css";
 import user from "@/../public/images/user.png";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
+import SignInBtn from "@/components/signInBtn/signInBtn";
 
 export default function User() {
+  const { data: session }: any = useSession();
+  let number = session?.user.user.number || "??";
+  if (number < 9) {
+    number = "0" + number;
+  }
   return (
     <div className={styles.container}>
       <Image
@@ -14,10 +23,18 @@ export default function User() {
       />
       <div className={styles.wrap}>
         <div className={styles.info}>
-          <p className={styles.name}>2427 조성민</p>
-          <p className={styles.email}>sid12g@naver.com</p>
+          {session ? (
+            <p className={styles.name}>24{number} 조성민</p>
+          ) : (
+            <p className={styles.name}>로그인 해주세요</p>
+          )}
+          {session ? (
+            <p className={styles.email}>sid12g@naver.com</p>
+          ) : (
+            <p className={styles.email}>로그인이 필요한 서비스 입니다.</p>
+          )}
         </div>
-        <p className={styles.logout}>로그아웃</p>
+        <SignInBtn />
       </div>
     </div>
   );

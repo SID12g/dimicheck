@@ -1,0 +1,16 @@
+.logout {
+  font-size: 14px;
+  font-family: "SUIT";
+  font-weight: 700;
+  color: #f25c5c;
+  margin-right: 28px;
+  cursor: pointer;
+}
+.login {
+  font-size: 14px;
+  font-family: "SUIT";
+  font-weight: 700;
+  color: #a8a8a8;
+  margin-right: 28px;
+  cursor: pointer;
+}
