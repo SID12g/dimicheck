@@ -21,6 +21,7 @@ export default function Register() {
           ))}
         </select>
         <input
+          required
           className={styles.pin}
           type="password"
           name="password"
@@ -30,6 +31,7 @@ export default function Register() {
           placeholder="PIN 4자리를 입력하세요."
         />{" "}
         <input
+          required
           className={styles.pin}
           type="telephone"
           name="telephone"
