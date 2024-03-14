@@ -14,24 +14,22 @@ export default function Home() {
     return (
       <div className={styles.container}>
         <div className={styles.wrap}>
-          <button
+          <div
             className={styles.button}
-            type="submit"
             onClick={() => {
               router.push("/api/auth/signin");
             }}
           >
             로그인
-          </button>
-          <button
+          </div>
+          <div
             className={styles.button}
-            type="submit"
             onClick={() => {
               router.push("/register");
             }}
           >
             가입
-          </button>
+          </div>
         </div>
         <Image
           className={styles.background}
