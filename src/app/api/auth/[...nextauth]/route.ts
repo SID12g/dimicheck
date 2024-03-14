@@ -2,6 +2,7 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import { connectDB } from "@/util/database";
+import bcrypt from "bcrypt";
 
 const handler = NextAuth({
   providers: [
@@ -19,14 +20,20 @@ const handler = NextAuth({
           placeholder: "비밀번호를 입력하세요.",
         },
       },
-      async authorize(credentials) {
+      async authorize(credentials: any) {
         let db = (await connectDB).db("dimicheck_database24");
         let user = await db
           .collection("users")
-          .findOne({ username: credentials?.number });
+          .findOne({ number: credentials?.number });
         if (user) {
-          console.log(user);
-          return user as any;
+          const pwcheck = await bcrypt.compare(
+            credentials.password,
+            user.password
+          );
+          if (pwcheck) {
+            return user as any;
+          }
+          return null;
         } else {
           return null;
         }

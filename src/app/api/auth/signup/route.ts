@@ -7,9 +7,13 @@ export async function POST(request: Request, response: Response) {
   const number = formData.get("number");
   const password: string | any = formData.get("password")?.toString();
   const hash = await bcrypt.hash(password, 10);
-  const user = { number, hash, location: "class", reason: "" };
+  const user = { number, password: hash, location: "class", reason: "" };
 
-  let db = (await connectDB).db("dimicheck_database24");
-  await db.collection("users").insertOne(user);
-  return NextResponse.json(200);
+  try {
+    let db = (await connectDB).db("dimicheck_database24");
+    await db.collection("users").insertOne(user);
+    return NextResponse.redirect(new URL("/api/auth/signin", request.url));
+  } catch (error) {
+    return NextResponse.json({ status: 500, error });
+  }
 }
