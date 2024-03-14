@@ -12,6 +12,11 @@ export default function User() {
   if (number < 9) {
     number = "0" + number;
   }
+  const telephone =
+    session?.user.user.telephone?.replace(
+      /^(\d{2,3})(\d{3,4})(\d{4})$/,
+      `$1-$2-$3`
+    ) || "?";
   return (
     <div className={styles.container}>
       <Image
@@ -29,7 +34,7 @@ export default function User() {
             <p className={styles.name}>로그인 해주세요</p>
           )}
           {session ? (
-            <p className={styles.telephone}>010-1111-1111</p>
+            <p className={styles.telephone}>{telephone}</p>
           ) : (
             <p className={styles.telephone}>로그인이 필요한 서비스 입니다.</p>
           )}

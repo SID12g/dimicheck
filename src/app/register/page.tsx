@@ -26,8 +26,17 @@ export default function Register() {
           name="password"
           pattern="[0-9]{4}"
           maxLength={4}
-          inputMode="numeric"
-          placeholder="PIN 4자리를 입력하세요"
+          inputMode="tel"
+          placeholder="PIN 4자리를 입력하세요."
+        />{" "}
+        <input
+          className={styles.pin}
+          type="telephone"
+          name="telephone"
+          pattern="[0-9]{11}"
+          maxLength={11}
+          inputMode="tel"
+          placeholder="전화번호를 입력하세요."
         />
         <button className={styles.submit} type="submit">
           가입

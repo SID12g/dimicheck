@@ -6,8 +6,15 @@ export async function POST(request: Request, response: Response) {
   const formData = await request.formData();
   const number = formData.get("number");
   const password: string | any = formData.get("password")?.toString();
+  const telephone = formData.get("telephone");
   const hash = await bcrypt.hash(password, 10);
-  const user = { number, password: hash, location: "class", reason: "" };
+  const user = {
+    number,
+    password: hash,
+    telephone,
+    location: "class",
+    reason: "",
+  };
 
   let db = (await connectDB).db("dimicheck_database24");
   let dbuser = await db.collection("users").findOne({ number: number });
