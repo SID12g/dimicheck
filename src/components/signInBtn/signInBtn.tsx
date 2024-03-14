@@ -1,12 +1,11 @@
 "use client";
 
 import styles from "@/components/signInBtn/signInBtn.module.css";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-function SignInBtn() {
-  const { data: session }: any = useSession();
+function SignInBtn({ session }: any) {
   const router = useRouter();
   return (
     <div>

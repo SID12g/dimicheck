@@ -1,13 +1,12 @@
-"use client";
-
 import styles from "@/components/student/user/user.module.css";
 import user from "@/../public/images/user.png";
 import Image from "next/image";
-import { useSession } from "next-auth/react";
 import SignInBtn from "@/components/signInBtn/signInBtn";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
-export default function User() {
-  const { data: session }: any = useSession();
+export default async function User() {
+  const session: any = await getServerSession(authOptions);
   let number = session?.user.user.number || "??";
   if (number < 9) {
     number = "0" + number;
@@ -39,7 +38,7 @@ export default function User() {
             <p className={styles.telephone}>로그인이 필요한 서비스 입니다.</p>
           )}
         </div>
-        <SignInBtn />
+        <SignInBtn session={session} />
       </div>
     </div>
   );
