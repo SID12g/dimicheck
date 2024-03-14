@@ -20,11 +20,6 @@ export default function Location() {
         <Option location="방과후" />
         <Option location="동아리" />
         <Etc />
-      </div>
-      <div className={styles.footer}>
-        <div className={styles.inquiry}>
-          문의 :<p className={styles.id}>@clwm_222</p>
-        </div>
         <Image
           className={styles.background}
           src={dimigo}
